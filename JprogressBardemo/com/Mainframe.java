@@ -14,8 +14,8 @@ import javax.swing.JProgressBar;
 public class Mainframe extends JFrame {
 
 	private JProgressBar bar = new JProgressBar();
-	private JButton startbutton = new JButton("¿ªÊ¼");
-	private JButton stoptbutton = new JButton("Í£Ö¹");
+	private JButton startbutton = new JButton("å¼€å§‹");
+	private JButton stoptbutton = new JButton("åœæ­¢");
 	private Thread update = null;
 	private int value;
 	private boolean updateflag = false;
@@ -34,12 +34,12 @@ public class Mainframe extends JFrame {
 					update = new Thread(new Updatebar());
 					update.start();
 				}
-				// ¿ªÊ¼
+				// å¼€å§‹
 				 Updatebar t1 = new Updatebar();
 				 Thread t = new Thread(t1);
 				 t.start();
 			} else if (e.getSource() == stoptbutton) {
-				// Í£Ö¹
+				// åœæ­¢
 				updateflag = false;
 				update.interrupt();
 			}
@@ -47,7 +47,7 @@ public class Mainframe extends JFrame {
 	};
 
 	public Mainframe() throws HeadlessException {
-		this("ÎŞÃû");
+		this("æ— å");
 	}
 
 	public Mainframe(String title) throws HeadlessException {
@@ -102,9 +102,9 @@ public class Mainframe extends JFrame {
 				});
 
 				try {
-					System.out.println("½øÈëË¯Ãß");
+					System.out.println("è¿›å…¥ç¡çœ ");
 					Thread.sleep(1000);
-					System.out.println("Àë¿ªË¯Ãß×´Ì¬");
+					System.out.println("ç¦»å¼€ç¡çœ çŠ¶æ€");
 				} catch (InterruptedException e1) {
 					// e1.printStackTrace();
 				}
