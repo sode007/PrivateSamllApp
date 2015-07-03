@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<!-- DO NOT EDIT: This is a generated file that is synchronized -->
+<!-- by MyEclipse Hibernate tool integration.                   -->
+<!-- Created Sun Nov 12 20:53:59 CST 2006                         -->
+<hibernate-mapping package="com.ORM">
+
+    <class name="Company" table="company">
+        <id name="id" column="ID" type="integer">
+            <generator class="identity"/>
+        </id>
+ 
+        <property name="companyname" column="COMPANYNAME" type="string" />
+        <property name="linkman" column="LINKMAN" type="string" />
+        <property name="telephone" column="TELEPHONE" type="string" />
+        <property name="email" column="EMAIL" type="string" />
+        
+        <!--映射Company与Login的一对一关联-->
+        <one-to-one name="login" 
+			        class="com.ORM.Login" 
+			        cascade="all"
+			        lazy="false" 
+			        outer-join="true" />
+    </class>
+    
+</hibernate-mapping>

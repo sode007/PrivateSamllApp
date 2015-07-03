@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="oneToOne"
+  id="myeclipse.1274708013734"
+  context-root="/oneToOne"
+  j2ee-spec="5.0"
+  archive="oneToOne.war">
+  <attributes>
+    <attribute name="webrootdir" value="/WebRoot" />
+  </attributes>
+</project-module>
+
